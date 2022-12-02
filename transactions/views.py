@@ -28,7 +28,7 @@ def CreateListTransactions(request):
 
         if request.POST.get("doc") == "":
             errors["not_found"] = "Você deve enviar um arquivo."
-            # raise NotFound(detail="You must send a file.")
+            
             return render(request, "form.html", context=context)
 
         file = request.FILES["doc"]
